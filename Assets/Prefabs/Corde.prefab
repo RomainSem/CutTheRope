@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42753565e81752f4da93a184f4aeafaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _trailPrefab: {fileID: 4793728525987771567, guid: ceac87359a2e4214b98bacd346b4b46d, type: 3}
 --- !u!61 &1205372380
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -295,7 +296,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.00000073152063, y: 0.4575268}
+  m_ConnectedAnchor: {x: 0.0000013579487, y: 0.4575268}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -316,6 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42753565e81752f4da93a184f4aeafaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _trailPrefab: {fileID: 4793728525987771567, guid: ceac87359a2e4214b98bacd346b4b46d, type: 3}
 --- !u!61 &269244132
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -487,6 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42753565e81752f4da93a184f4aeafaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _trailPrefab: {fileID: 4793728525987771567, guid: ceac87359a2e4214b98bacd346b4b46d, type: 3}
 --- !u!61 &1168276621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -689,7 +692,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.001896065, y: 0.9524727}
+  m_ConnectedAnchor: {x: 3.457527, y: 2.151895}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -710,6 +713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42753565e81752f4da93a184f4aeafaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _trailPrefab: {fileID: 4793728525987771567, guid: ceac87359a2e4214b98bacd346b4b46d, type: 3}
 --- !u!61 &144380356
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -907,6 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42753565e81752f4da93a184f4aeafaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _trailPrefab: {fileID: 4793728525987771567, guid: ceac87359a2e4214b98bacd346b4b46d, type: 3}
 --- !u!61 &326735704
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1078,6 +1083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42753565e81752f4da93a184f4aeafaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _trailPrefab: {fileID: 4793728525987771567, guid: ceac87359a2e4214b98bacd346b4b46d, type: 3}
 --- !u!61 &1245332441
 BoxCollider2D:
   m_ObjectHideFlags: 0

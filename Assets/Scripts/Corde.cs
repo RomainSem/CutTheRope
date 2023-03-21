@@ -6,14 +6,15 @@ public class Corde : MonoBehaviour
 {
     #region Exposed
 
-    
+    [SerializeField] GameObject _trailPrefab;
+
     #endregion
 
     #region Unity Lyfecycle
 
     private void Awake()
     {
-        
+
     }
 
     void Start()
@@ -25,11 +26,20 @@ public class Corde : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            isMouseDown = true;
+            _isMouseDown = true;
+            // Affiche un effet de coupe
+            Vector2 mousePos = Input.mousePosition;
+            Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+            if (!_isTrailGenerated)
+            {
+                _isTrailGenerated= true;
+                trail = Instantiate(_trailPrefab, worldPosition, Quaternion.identity);
+            }
+            trail.transform.position = worldPosition;
         }
         else
         {
-            isMouseDown= false;
+            _isMouseDown = false;
         }
     }
 
@@ -41,14 +51,17 @@ public class Corde : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (isMouseDown)
+        if (_isMouseDown)
         {
-            // Affiche un effet de coupe
-
-
             // Détruire le GameObject sur lequel la souris passe
             Destroy(gameObject);
         }
+    }
+
+    private void OnMouseUp()
+    {
+        _isTrailGenerated = false;
+        Destroy(trail);
     }
 
 
@@ -57,7 +70,9 @@ public class Corde : MonoBehaviour
 
     #region Private & Protected
 
-    bool isMouseDown;
+    bool _isMouseDown;
+    bool _isTrailGenerated;
+    GameObject trail;
 
 
     #endregion
