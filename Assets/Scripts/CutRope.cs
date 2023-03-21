@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Corde : MonoBehaviour
+public class CutRope : MonoBehaviour
 {
     #region Exposed
 
@@ -27,15 +27,6 @@ public class Corde : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             _isMouseDown = true;
-            // Affiche un effet de coupe
-            Vector2 mousePos = Input.mousePosition;
-            Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
-            if (!_isTrailGenerated)
-            {
-                _isTrailGenerated= true;
-                trail = Instantiate(_trailPrefab, worldPosition, Quaternion.identity);
-            }
-            trail.transform.position = worldPosition;
         }
         else
         {
@@ -54,25 +45,18 @@ public class Corde : MonoBehaviour
         if (_isMouseDown)
         {
             // Détruire le GameObject sur lequel la souris passe
-            Destroy(gameObject);
+            if (gameObject != null)
+            {
+                Destroy(gameObject);
+            }
         }
     }
-
-    private void OnMouseUp()
-    {
-        _isTrailGenerated = false;
-        Destroy(trail);
-    }
-
-
 
     #endregion
 
     #region Private & Protected
 
     bool _isMouseDown;
-    bool _isTrailGenerated;
-    GameObject trail;
 
 
     #endregion
