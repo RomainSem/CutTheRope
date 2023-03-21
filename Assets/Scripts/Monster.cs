@@ -13,7 +13,6 @@ public class Monster : MonoBehaviour
 
     private void Awake()
     {
-        
     }
 
     void Start()
@@ -31,17 +30,12 @@ public class Monster : MonoBehaviour
 
     #region Methods
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Candy")
-        {
-            // Win
-        }
-    }
+    
 
     #endregion
 
     #region Private & Protected
+
 
     #endregion
 }

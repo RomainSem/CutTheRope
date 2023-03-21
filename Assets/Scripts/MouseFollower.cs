@@ -26,7 +26,6 @@ public class MouseFollower : MonoBehaviour
         Vector2 mousePos = Input.mousePosition;
         Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
         transform.position = worldPosition;
-        Debug.Log(mousePos);
     }
 
     

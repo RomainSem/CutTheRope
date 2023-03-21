@@ -45,6 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 415d0a618f404e047a4624d743628a62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _winPanel: {fileID: 0}
+  _losePanel: {fileID: 0}
+  _nbStars:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _goldenStarSprite: {fileID: -1884708387, guid: bd9cecc4715a59f45916b0404e75b93e, type: 3}
+  _emptyStarSprite: {fileID: -1948452003, guid: bd9cecc4715a59f45916b0404e75b93e, type: 3}
 --- !u!114 &6538035469553036883
 MonoBehaviour:
   m_ObjectHideFlags: 0
