@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Candy
   - Star
-  - Wall
   - Monster
   - Bubble
   layers:
@@ -16,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Bubble
   - 
   - 
   - 
