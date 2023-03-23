@@ -63,7 +63,7 @@ public class Candy : MonoBehaviour
             _rgbdy.gravityScale = 0;
             IsBubbleTaken = true;
             transform.position = _bubbleRgbdy.worldCenterOfMass;
-            _bubbleRgbdy.velocity = new Vector2(0, 3);
+            _bubbleRgbdy.velocity = new Vector2(0, 4);
             _collider.enabled = false;
             GetComponent<FixedJoint2D>().enabled = true;
         }
