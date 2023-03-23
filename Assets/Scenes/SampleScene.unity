@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &34592124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4257206494495559393, guid: 408441dbbb35a7444bed71f11a93139a, type: 3}
+  m_PrefabInstance: {fileID: 1611792447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &85283762
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,6 +545,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 783578798}
     m_Modifications:
+    - target: {fileID: 1567945668, guid: 557cc9f3469bbf64a949795225768aef, type: 3}
+      propertyPath: m_ConnectedRigidBody
+      value: 
+      objectReference: {fileID: 1509277716}
     - target: {fileID: 7676120672206769793, guid: 557cc9f3469bbf64a949795225768aef, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -550,7 +559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7676120672206769793, guid: 557cc9f3469bbf64a949795225768aef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.76
+      value: -0.46
       objectReference: {fileID: 0}
     - target: {fileID: 7676120672206769793, guid: 557cc9f3469bbf64a949795225768aef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -586,11 +595,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7676120672206769806, guid: 557cc9f3469bbf64a949795225768aef, type: 3}
       propertyPath: m_Name
-      value: Bonbon (1)
+      value: BonbonTest
       objectReference: {fileID: 0}
     - target: {fileID: 7676120672206769806, guid: 557cc9f3469bbf64a949795225768aef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 557cc9f3469bbf64a949795225768aef, type: 3}
@@ -668,7 +677,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -677,34 +686,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &1567945663 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7676120672206769806, guid: 557cc9f3469bbf64a949795225768aef, type: 3}
-  m_PrefabInstance: {fileID: 1418702185}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1567945664 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7676120672206769793, guid: 557cc9f3469bbf64a949795225768aef, type: 3}
   m_PrefabInstance: {fileID: 1418702185}
   m_PrefabAsset: {fileID: 0}
---- !u!255 &1567945668
-FixedJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567945663}
-  m_Enabled: 0
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 1509277716}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 9.04}
-  m_DampingRatio: 0
-  m_Frequency: 0
 --- !u!1001 &1611792447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -984,6 +970,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5910035047659771709, guid: 408441dbbb35a7444bed71f11a93139a, type: 3}
   m_PrefabInstance: {fileID: 4257206494623162206}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1918021965 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4257206494495559393, guid: 408441dbbb35a7444bed71f11a93139a, type: 3}
+  m_PrefabInstance: {fileID: 4257206494623162206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &399396487765890000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1026,6 +1017,34 @@ PrefabInstance:
     - target: {fileID: 399396487871338988, guid: a98c34759346c714f9da1700732d8e4d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 399396487871338989, guid: a98c34759346c714f9da1700732d8e4d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 399396487871338989, guid: a98c34759346c714f9da1700732d8e4d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 399396487871338989, guid: a98c34759346c714f9da1700732d8e4d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1299106339}
+    - target: {fileID: 399396487871338989, guid: a98c34759346c714f9da1700732d8e4d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 399396487871338989, guid: a98c34759346c714f9da1700732d8e4d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitApp
+      objectReference: {fileID: 0}
+    - target: {fileID: 399396487871338989, guid: a98c34759346c714f9da1700732d8e4d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 399396487871338989, guid: a98c34759346c714f9da1700732d8e4d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 399396487907440425, guid: a98c34759346c714f9da1700732d8e4d, type: 3}
       propertyPath: m_Name
@@ -1318,6 +1337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster
       objectReference: {fileID: 0}
+    - target: {fileID: 7179680541417886036, guid: d6d794834f7cffd46a41ae26bdd6d54a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7179680541417886038, guid: d6d794834f7cffd46a41ae26bdd6d54a, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1371,6 +1394,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 783578798}
     m_Modifications:
+    - target: {fileID: 1567945668, guid: 557cc9f3469bbf64a949795225768aef, type: 3}
+      propertyPath: m_ConnectedRigidBody
+      value: 
+      objectReference: {fileID: 1509277716}
     - target: {fileID: 7676120672206769793, guid: 557cc9f3469bbf64a949795225768aef, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1421,8 +1448,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7676120672206769806, guid: 557cc9f3469bbf64a949795225768aef, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8764780698110320507, guid: 557cc9f3469bbf64a949795225768aef, type: 3}
+      propertyPath: _ropesToDestroy.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764780698110320507, guid: 557cc9f3469bbf64a949795225768aef, type: 3}
+      propertyPath: _ropesToDestroy.Array.data[0]
+      value: 
+      objectReference: {fileID: 34592124}
+    - target: {fileID: 8764780698110320507, guid: 557cc9f3469bbf64a949795225768aef, type: 3}
+      propertyPath: _ropesToDestroy.Array.data[1]
+      value: 
+      objectReference: {fileID: 1918021965}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 557cc9f3469bbf64a949795225768aef, type: 3}
 --- !u!1001 &7989914902913431203

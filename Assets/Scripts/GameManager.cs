@@ -39,6 +39,11 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void QuitApp()
+    {
+        Application.Quit();
+    }
+
     public void Win()
     {
         if (_candyRef.IsWon)

@@ -8,6 +8,7 @@ public class Candy : MonoBehaviour
     #region Exposed
 
     [SerializeField] bool _isBubbleTaken;
+    [SerializeField] GameObject[] _ropesToDestroy;
 
     #endregion
 
@@ -15,16 +16,10 @@ public class Candy : MonoBehaviour
 
     private void Awake()
     {
-        IsLost = false;
-        IsWon = false;
-        IsStarTaken = false;
-        //IsBubbleTaken = false;
-
         _bubble = GameObject.FindGameObjectWithTag("Bubble");
         _bubbleRgbdy = _bubble.GetComponent<Rigidbody2D>();
         _rgbdy = GetComponent<Rigidbody2D>();
         _collider = GetComponent<CircleCollider2D>();
-
     }
 
     private void Update()
@@ -33,11 +28,11 @@ public class Candy : MonoBehaviour
         Debug.Log("UPDATE Candy : " + IsBubbleTaken);
         if (IsBubbleTaken)
         {
-            //Vector2 bubblePos = _bubble.transform.position;
-            //Vector2 worldPosition = Camera.main.ScreenToWorldPoint(bubblePos);
-            //transform.position = bubblePos;
-            //transform.parent = _bubble.transform;
             GetComponent<CircleCollider2D>().isTrigger = true;
+            foreach (GameObject rope in _ropesToDestroy)
+            {
+                Destroy(rope);
+            }
         }
         LimitY();
     }
@@ -64,14 +59,13 @@ public class Candy : MonoBehaviour
         }
         if (collision.gameObject.tag == "Bubble")
         {
-            IsBubbleTaken = true;
-            _rgbdy.gravityScale = 0;
             _rgbdy.velocity = Vector2.zero;
+            _rgbdy.gravityScale = 0;
+            IsBubbleTaken = true;
             transform.position = _bubbleRgbdy.worldCenterOfMass;
-            _bubbleRgbdy.velocity = new Vector2(0, 2);
-            //_bubble.GetComponent<FixedJoint2D>().enabled = true;
+            _bubbleRgbdy.velocity = new Vector2(0, 3);
+            _collider.enabled = false;
             GetComponent<FixedJoint2D>().enabled = true;
-            //Debug.Log(IsBubbleTaken);
         }
     }
 
@@ -79,8 +73,8 @@ public class Candy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Monster")
         {
-            Destroy(gameObject);
             IsWon = true;
+            Destroy(gameObject);
         }
     }
 

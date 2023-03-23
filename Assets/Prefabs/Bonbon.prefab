@@ -266,6 +266,7 @@ GameObject:
   - component: {fileID: 7676120672206769807}
   - component: {fileID: 8764780698110320507}
   - component: {fileID: 1023289596}
+  - component: {fileID: 1567945668}
   m_Layer: 0
   m_Name: Bonbon
   m_TagString: Candy
@@ -322,6 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 359d89daa3a050c42a73a651d2541e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isBubbleTaken: 0
 --- !u!58 &1023289596
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -338,3 +340,21 @@ CircleCollider2D:
   m_Offset: {x: -0.1, y: 0.21133333}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!255 &1567945668
+FixedJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7676120672206769806}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 9.04}
+  m_DampingRatio: 0
+  m_Frequency: 0
